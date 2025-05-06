@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dogex (DOGE) - A community-driven meme token on the Solana blockchain with fast transactions and low fees.">
+    <meta property="og:title" content="Dogex (DOGE) - Official Website">
+    <meta property="og:description" content="Dogex (DOGE) - A community-driven meme token on the Solana blockchain with fast transactions and low fees.">
+    <meta property="og:image" content="dogex-logo.png">
+    <title>Dogex (DOGE) - Official Token Website</title>
+    <link rel="icon" href="dogex-logo.png" type="image/png">
+    <style>
+        :root {
+            --primary-color: #f0b90b;
+            --secondary-color: #ffd152;
+            --dark-color: #333;
+            --light-color: #fff;
+            --background-color: #fffbe6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--background-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 10px 25px rgba(240, 185, 11, 0.2);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(to right, rgba(255, 251, 230, 0.9), rgba(255, 251, 230, 0.8));
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(240, 185, 11, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 20px rgba(240, 185, 11, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+        }
+        
+        .features {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .feature-card {
+            flex: 1 1 300px;
+            max-width: 350px;
+            background-color: var(--light-color);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .tokenomics {
+            padding: 80px 0;
+            background-color: var(--light-color);
+            text-align: center;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+        
+        .tokenomics h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        
+        .tokenomics-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .tokenomics-item {
+            flex: 1 1 200px;
+            max-width: 250px;
+            padding: 20px;
+        }
+        
+        .tokenomics-item h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .tokenomics-item p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .roadmap {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .roadmap h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        
+        .roadmap-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .roadmap-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+        
+        .roadmap-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        
+        .roadmap-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: var(--primary-color);
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .roadmap-left {
+            left: 0;
+        }
+        
+        .roadmap-right {
+            left: 50%;
+        }
+        
+        .roadmap-right::after {
+            left: -12px;
+        }
+        
+        .roadmap-content {
+            padding: 20px 25px;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .roadmap-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .community {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--light-color);
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+        
+        .community h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .community p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #555;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 15px rgba(240, 185, 11, 0.3);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 80px;
+        }
+        
+        footer p {
+            margin-bottom: 15px;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2, .features h2, .tokenomics h2, .roadmap h2, .community h2 {
+                font-size: 2rem;
+            }
+            
+            .roadmap-timeline::after {
+                left: 31px;
+            }
+            
+            .roadmap-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .roadmap-right {
+                left: 0;
+            }
+            
+            .roadmap-item::after {
+                left: 18px;
+                top: 15px;
+            }
+            
+            .roadmap-right::after {
+                left: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="dogex-logo.png" alt="Dogex Token Logo" class="logo">
+            <h1>Dogex (DOGE)</h1>
+            <p class="tagline">The community-driven meme token on Solana</p>
+            <div>
+                <a href="#about" class="btn">Learn More</a>
+                <a href="Dogex-Whitepaper.pdf" class="btn btn-outline" target="_blank">Whitepaper</a>
+            </div>
+        </header>
+        
+        <section class="hero" id="about">
+            <div class="container">
+                <h2>The Future of Meme Tokens</h2>
+                <p>Dogex combines the fun of meme culture with the lightning-fast Solana blockchain. Trade, hold, and join a growing community of enthusiasts who believe in the power of the doge.</p>
+                <a href="#" class="btn">Coming Soon</a>
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Dogex?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Built on Solana blockchain, Dogex transactions are completed in seconds with minimal fees.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Community Driven</h3>
+                        <p>Every decision is made with the community in mind. Your voice matters in the Dogex ecosystem.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure & Transparent</h3>
+                        <p>Open-source code and transparent tokenomics ensure the safety of all participants.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tokenomics" id="tokenomics">
+            <div class="container">
+                <h2>Tokenomics</h2>
+                <div class="tokenomics-details">
+                    <div class="tokenomics-item">
+                        <h3>1B</h3>
+                        <p>Total Supply</p>
+                    </div>
+                    <div class="tokenomics-item">
+                        <h3>50%</h3>
+                        <p>Community Allocation</p>
+                    </div>
+                    <div class="tokenomics-item">
+                        <h3>30%</h3>
+                        <p>Liquidity Pool</p>
+                    </div>
+                    <div class="tokenomics-item">
+                        <h3>20%</h3>
+                        <p>Development & Marketing</p>
+                    </div>
+                </div>
+                <p>Dogex token (DOGE) is designed with a fair distribution model that prioritizes community ownership and long-term sustainability.</p>
+            </div>
+        </section>
+        
+        <section class="roadmap" id="roadmap">
+            <div class="container">
+                <h2>Roadmap</h2>
+                <div class="roadmap-timeline">
+                    <div class="roadmap-item roadmap-left">
+                        <div class="roadmap-content">
+                            <h3>Phase 1: Launch</h3>
+                            <p>Website launch, token deployment on Solana, community building, and initial marketing push.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item roadmap-right">
+                        <div class="roadmap-content">
+                            <h3>Phase 2: Growth</h3>
+                            <p>DEX listings, community expansion, partnerships with influencers, and enhanced marketing campaigns.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item roadmap-left">
+                        <div class="roadmap-content">
+                            <h3>Phase 3: Utility</h3>
+                            <p>Development of token utilities, NFT collections, and staking mechanisms for long-term holders.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item roadmap-right">
+                        <div class="roadmap-content">
+                            <h3>Phase 4: Expansion</h3>
+                            <p>CEX listings, cross-chain integration, and building advanced DeFi features for the ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="community" id="community">
+            <div class="container">
+                <h2>Join Our Community</h2>
+                <p>Become part of a vibrant community of Dogex enthusiasts. Stay updated, participate in discussions, and help shape the future of Dogex.</p>
+                <div class="social-links">
+                    <a href="https://t.me/zhipiaoa" class="social-link" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM17.855 8.252C17.724 9.854 17.158 14.222 16.871 16.298C16.748 17.181 16.508 17.515 16.276 17.547C15.774 17.617 15.391 17.236 14.913 16.905C14.162 16.386 13.729 16.069 13.001 15.562C12.154 14.969 12.7 14.643 13.183 14.141C13.307 14.012 15.508 11.982 15.555 11.795C15.5624 11.7609 15.5624 11.7254 15.555 11.6914C15.5475 11.6575 15.5331 11.6264 15.513 11.6C15.461 11.535 15.389 11.553 15.328 11.565C15.255 11.579 13.549 12.732 10.211 14.993C9.8363 15.2492 9.4103 15.3814 8.973 15.377C8.4898 15.3725 7.54 15.0976 6.833 14.863C5.96 14.576 5.267 14.426 5.307 13.954C5.328 13.708 5.67 13.456 6.333 13.199C9.903 11.625 12.202 10.591 13.23 10.091C16.131 8.674 16.716 8.482 17.097 8.475C17.176 8.474 17.346 8.495 17.455 8.585C17.537 8.658 17.566 8.757 17.579 8.829C17.597 8.932 17.867 8.227 17.855 8.252Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.643 2.93708C22.808 3.30708 21.911 3.55708 20.968 3.67008C21.941 3.08787 22.669 2.17154 23.016 1.09208C22.1018 1.63507 21.1013 2.01727 20.058 2.22208C19.3564 1.47294 18.4271 0.976403 17.4143 0.809551C16.4016 0.642699 15.3621 0.814868 14.4572 1.29933C13.5524 1.78379 12.8328 2.55344 12.4102 3.48878C11.9875 4.42412 11.8855 5.47283 12.12 6.47208C10.2677 6.37907 8.45564 5.89763 6.80144 5.05898C5.14723 4.22034 3.68785 3.04324 2.51801 1.60408C2.11801 2.29408 1.88801 3.09408 1.88801 3.94608C1.88757 4.71307 2.07644 5.46832 2.43789 6.14481C2.79934 6.8213 3.32217 7.39812 3.96001 7.82408C3.22029 7.80054 2.49688 7.60066 1.85001 7.24108V7.30108C1.84994 8.37682 2.22204 9.41946 2.90319 10.2521C3.58434 11.0847 4.53258 11.656 5.58701 11.8691C4.9008 12.0548 4.18135 12.0821 3.48301 11.9491C3.78051 12.8747 4.36001 13.6841 5.14038 14.264C5.92075 14.8439 6.86293 15.1653 7.83501 15.1831C6.18485 16.4785 4.14689 17.1812 2.04901 17.1781C1.6769 17.1782 1.30503 17.1565 0.936012 17.1131C3.06649 18.4823 5.54535 19.2089 8.07701 19.2061C16.647 19.2061 21.332 12.1081 21.332 5.95208C21.332 5.75208 21.327 5.55008 21.318 5.35008C22.2293 4.69105 23.0159 3.87497 23.641 2.94008L23.643 2.93708Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.162C15.204 2.162 15.584 2.174 16.849 2.232C18.157 2.292 19.504 2.59 20.457 3.543C21.419 4.505 21.708 5.839 21.768 7.151C21.826 8.416 21.838 8.796 21.838 12C21.838 15.204 21.826 15.584 21.768 16.849C21.709 18.15 21.404 19.51 20.457 20.457C19.495 21.419 18.162 21.708 16.849 21.768C15.584 21.826 15.204 21.838 12 21.838C8.796 21.838 8.416 21.826 7.151 21.768C5.86 21.709 4.482 21.397 3.543 20.457C2.586 19.5 2.292 18.153 2.232 16.849C2.174 15.584 2.162 15.204 2.162 12C2.162 8.796 2.174 8.416 2.232 7.151C2.291 5.855 2.599 4.487 3.543 3.543C4.503 2.583 5.842 2.292 7.151 2.232C8.416 2.174 8.796 2.162 12 2.162ZM12 0C8.741 0 8.332 0.014 7.052 0.072C5.197 0.157 3.355 0.673 2.014 2.014C0.668 3.36 0.157 5.198 0.072 7.052C0.014 8.332 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.157 18.801 0.675 20.648 2.014 21.986C3.359 23.331 5.2 23.843 7.052 23.928C8.332 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C18.802 23.843 20.646 23.326 21.986 21.986C23.333 20.639 23.843 18.802 23.928 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.332 23.928 7.052C23.843 5.197 23.326 3.354 21.986 2.014C20.643 0.671 18.797 0.156 16.948 0.072C15.668 0.014 15.259 0 12 0Z" fill="white"/>
+                            <path d="M12 5.838C8.597 5.838 5.838 8.597 5.838 12C5.838 15.403 8.597 18.162 12 18.162C15.403 18.162 18.162 15.403 18.162 12C18.162 8.597 15.403 5.838 12 5.838ZM12 16C9.791 16 8 14.209 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.209 14.209 16 12 16Z" fill="white"/>
+                            <path d="M18.406 7.034C19.2013 7.034 19.846 6.38929 19.846 5.594C19.846 4.79871 19.2013 4.154 18.406 4.154C17.6107 4.154 16.966 4.79871 16.966 5.594C16.966 6.38929 17.6107 7.034 18.406 7.034Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <a href="https://t.me/zhipiaoa" class="btn" target="_blank">Join Telegram</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dogex (DOGE). All rights reserved.</p>
+            <p>
+                <a href="Dogex-Whitepaper.pdf" target="_blank">Whitepaper</a> | 
+                <a href="#">Terms</a> | 
+                <a href="#">Privacy</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
